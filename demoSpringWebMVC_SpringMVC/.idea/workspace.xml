@@ -10,9 +10,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f157f724-fbeb-4fe4-817f-a3d509023b91" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/HelloController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../demoSpringWebMVC_SpringIocContainer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demoSpringWebMVC_SpringIocContainer/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +172,7 @@
       <workItem from="1645599866778" duration="374000" />
       <workItem from="1645600475660" duration="1597000" />
       <workItem from="1645602166062" duration="2342000" />
-      <workItem from="1645605562618" duration="1192000" />
+      <workItem from="1645605562618" duration="1635000" />
     </task>
     <servers />
   </component>
