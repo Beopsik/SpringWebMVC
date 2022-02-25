@@ -10,7 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f157f724-fbeb-4fe4-817f-a3d509023b91" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../demoSpringWebMVC_FinishSpringMVCMovementPrinciple/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demoSpringWebMVC_FinishSpringMVCMovementPrinciple/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +47,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../demoSpringWebMVC_SpringMVCBeanConfiguration" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -56,12 +56,12 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 9.0.58" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.58" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/demoSpringWebMVC_FinishSpringMVCMovementPrinciple_war_exploded/" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/demoSpringWebMVC_SpringMVCBeanConfiguration_war_exploded/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <artifact name="demoSpringWebMVC_FinishSpringMVCMovementPrinciple:war exploded">
+        <artifact name="demoSpringWebMVC_SpringMVCBeanConfiguration:war exploded">
           <settings>
-            <option name="CONTEXT_PATH" value="/demoSpringWebMVC_FinishSpringMVCMovementPrinciple_war_exploded" />
+            <option name="CONTEXT_PATH" value="/demoSpringWebMVC_SpringMVCBeanConfiguration_war_exploded" />
           </settings>
         </artifact>
       </deployment>
@@ -145,6 +145,7 @@
           <artifact name="demoSpringWebMVC_SpringMVC:war exploded" />
           <artifact name="demoSpringWebMVC_DispatcherServlet:war exploded" />
           <artifact name="demoSpringWebMVC_FinishSpringMVCMovementPrinciple:war exploded" />
+          <artifact name="demoSpringWebMVC_SpringMVCBeanConfiguration:war exploded" />
         </option>
       </method>
     </configuration>
@@ -166,7 +167,8 @@
       <workItem from="1645685355002" duration="3960000" />
       <workItem from="1645753972241" duration="617000" />
       <workItem from="1645755340018" duration="1128000" />
-      <workItem from="1645756487859" duration="897000" />
+      <workItem from="1645756487859" duration="825000" />
+      <workItem from="1645757645947" duration="1225000" />
     </task>
     <servers />
   </component>
