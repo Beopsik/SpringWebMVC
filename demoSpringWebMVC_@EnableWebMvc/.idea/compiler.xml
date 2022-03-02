@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="demoSpringWebMVC_SpringMVCBeanConfiguration" />
+        <module name="demoSpringWebMVC_SpringIocContainer" />
+        <module name="demoSpringWebMVC_Servlet" />
+        <module name="demoSpringWebMVC_Servlet_ListenerAndFilter" />
+        <module name="demoSpringWebMVC_SpringMVC" />
+        <module name="demoSpringWebMVC_DispatcherServlet" />
+        <module name="demoSpringWebMVC_@EnableWebMvc" />
+        <module name="demoSpringWebMVC_Servlet_Listener&amp;Filter" />
+        <module name="demoSpringWebMVC_FinishSpringMVCMovementPrinciple" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>
