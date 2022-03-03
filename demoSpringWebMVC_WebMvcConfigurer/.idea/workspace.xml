@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f157f724-fbeb-4fe4-817f-a3d509023b91" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../demoSpringWebMVC_@EnableWebMvc/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../demoSpringWebMVC_@EnableWebMvc/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="f157f724-fbeb-4fe4-817f-a3d509023b91" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -187,7 +185,7 @@
       <workItem from="1645762192425" duration="1036000" />
       <workItem from="1645765678144" duration="9000" />
       <workItem from="1646180707930" duration="2323000" />
-      <workItem from="1646268909283" duration="841000" />
+      <workItem from="1646268909283" duration="1364000" />
     </task>
     <servers />
   </component>
