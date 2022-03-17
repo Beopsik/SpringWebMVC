@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpHeaders;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -44,5 +45,14 @@ public class SimpleControllerTest {
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().string(Matchers.containsString("Hello Index")));
+    }
+
+    @Test
+    public void mobileStatic() throws Exception{
+        this.mockMvc.perform(get("/mobile/index.html"))
+                .andDo(print())
+                .andExpect(status().isOk())
+                .andExpect(content().string(Matchers.containsString("Hello Mobile")))
+                .andExpect(header().exists(HttpHeaders.CACHE_CONTROL));
     }
 }
