@@ -9,7 +9,7 @@ import org.springframework.http.MediaType;
 @Controller
 public class SimpleController {
 
-    @GetMapping(value = "/hello", params = "name=beobsik")
+    @GetMapping(value = "/hello")
     @ResponseBody
     public String hello(){
         return "hello";

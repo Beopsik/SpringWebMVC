@@ -21,10 +21,10 @@ public class SimpleControllerTest {
 
     @Test
     public void helloTest() throws Exception {
-        mockMvc.perform(get("/hello")
-                .param("name", "beobsik"))
+        mockMvc.perform(options("/hello"))
                 .andDo(print())
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(header().stringValues(HttpHeaders.ALLOW, "GET,HEAD,OPTIONS"));
     }
 
 }
