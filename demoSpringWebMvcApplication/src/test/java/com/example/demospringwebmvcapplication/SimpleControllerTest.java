@@ -21,9 +21,10 @@ public class SimpleControllerTest {
 
     @Test
     public void helloTest() throws Exception {
-        mockMvc.perform(options("/hello"))
+        mockMvc.perform(get("/events/1;name=beobsik"))
                 .andDo(print())
-                .andExpect(status().isOk());
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("id").value(1));
     }
 
 }
