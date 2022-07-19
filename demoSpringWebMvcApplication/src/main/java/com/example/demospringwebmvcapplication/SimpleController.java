@@ -2,7 +2,10 @@ package com.example.demospringwebmvcapplication;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import javax.validation.Valid;
 
 @Controller
 public class SimpleController {
@@ -17,7 +20,7 @@ public class SimpleController {
 
     @PostMapping("events")
     @ResponseBody
-    public Event getEvent(@ModelAttribute Event event){
+    public Event getEvent(@Validated(Event.ValidatedName.class) @ModelAttribute Event event){
         return event;
     }
 }

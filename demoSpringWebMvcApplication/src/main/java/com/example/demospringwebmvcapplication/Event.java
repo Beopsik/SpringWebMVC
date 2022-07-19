@@ -1,9 +1,14 @@
 package com.example.demospringwebmvcapplication;
 
+import javax.validation.constraints.NotBlank;
+
 public class Event {
+
+    interface ValidatedName {}
 
     private Integer id;
 
+    @NotBlank(groups = ValidatedName.class)
     private String name;
 
     public Integer getId() {
