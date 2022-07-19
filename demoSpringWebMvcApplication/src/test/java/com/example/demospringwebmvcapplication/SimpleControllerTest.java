@@ -23,8 +23,7 @@ public class SimpleControllerTest {
     public void helloTest() throws Exception {
         mockMvc.perform(options("/hello"))
                 .andDo(print())
-                .andExpect(status().isOk())
-                .andExpect(header().stringValues(HttpHeaders.ALLOW, "GET,HEAD,OPTIONS"));
+                .andExpect(status().isOk());
     }
 
 }
