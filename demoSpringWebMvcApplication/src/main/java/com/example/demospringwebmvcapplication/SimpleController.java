@@ -17,9 +17,7 @@ public class SimpleController {
 
     @PostMapping("events")
     @ResponseBody
-    public Event getEvent(@RequestParam String name){
-        Event event=new Event();
-        event.setName(name);
+    public Event getEvent(@ModelAttribute Event event){
         return event;
     }
 }
