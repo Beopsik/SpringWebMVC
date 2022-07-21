@@ -8,6 +8,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 
+import static org.hamcrest.Matchers.notNullValue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -21,12 +22,12 @@ public class SimpleControllerTest {
 
     @Test
     public void helloTest() throws Exception {
-        mockMvc.perform(post("/events")
+        mockMvc.perform(get("/events/form")
                 .param("name", "beobsik"))
                 .andDo(print())
-                .andExpect(status().is3xxRedirection());
-//                .andExpect(status().isOk());
-//                .andExpect(model().hasErrors());
+                .andExpect(view().name("events/form"))
+                .andExpect(model().attributeExists("event"))
+                .andExpect(request().sessionAttribute("event", notNullValue()));
     }
 
 }

@@ -5,7 +5,9 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
@@ -14,19 +16,21 @@ import java.util.List;
 public class SimpleController {
 
     @GetMapping("/events/form")
-    public String eventsForm(Model model){
+    public String eventsForm(Model model, HttpSession httpSession){
         Event newEvent = new Event();
         newEvent.setId(1);
         model.addAttribute("event", newEvent);
+        httpSession.setAttribute("event", newEvent);
         return "events/form";
     }
 
     @PostMapping("events")
-    public String getEvent(@Validated @ModelAttribute Event event, BindingResult bindingResult, Model model){
+    public String getEvent(@Validated @ModelAttribute Event event, BindingResult bindingResult, SessionStatus sessionStatus){
         if(bindingResult.hasErrors()){
             return "/events/form";
         }
-
+        sessionStatus.setComplete();
+        
         return "redirect:/events/list";
     }
 
