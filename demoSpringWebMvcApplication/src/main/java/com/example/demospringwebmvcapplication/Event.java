@@ -8,7 +8,6 @@ public class Event {
 
     private Integer id;
 
-    @NotBlank(groups = ValidatedName.class)
     private String name;
 
     public Integer getId() {

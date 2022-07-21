@@ -2,10 +2,13 @@ package com.example.demospringwebmvcapplication;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.ArrayList;
+import java.util.List;
 
 @Controller
 public class SimpleController {
@@ -19,8 +22,24 @@ public class SimpleController {
     }
 
     @PostMapping("events")
-    @ResponseBody
-    public Event getEvent(@Validated(Event.ValidatedName.class) @ModelAttribute Event event){
-        return event;
+    public String getEvent(@Validated @ModelAttribute Event event, BindingResult bindingResult, Model model){
+        if(bindingResult.hasErrors()){
+            return "/events/form";
+        }
+
+        return "redirect:/events/list";
+    }
+
+    @GetMapping("/events/list")
+    public String getEvents(Model model){
+        Event event = new Event();
+        event.setName("beobsik");
+
+
+        List<Event> eventList = new ArrayList<>();
+        eventList.add(event);
+        model.addAttribute("eventList", eventList);
+
+        return "/events/list";
     }
 }
