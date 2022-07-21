@@ -45,7 +45,7 @@ public class SimpleController {
             return "/events/form-limit";
         }
         sessionStatus.setComplete();
-        attributes.addAttribute("name", event.getName());
+        attributes.addFlashAttribute("newEvent", event);
         return "redirect:/events/list";
     }
 
