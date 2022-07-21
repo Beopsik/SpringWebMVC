@@ -25,7 +25,7 @@ public class SimpleControllerTest {
         mockMvc.perform(get("/events/form")
                 .param("name", "beobsik"))
                 .andDo(print())
-                .andExpect(view().name("events/form"))
+                .andExpect(view().name("/events/form"))
                 .andExpect(model().attributeExists("event"))
                 .andExpect(request().sessionAttribute("event", notNullValue()));
     }

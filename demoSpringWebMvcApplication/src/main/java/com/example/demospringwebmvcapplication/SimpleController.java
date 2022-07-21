@@ -13,24 +13,36 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
+@SessionAttributes("event")
 public class SimpleController {
 
-    @GetMapping("/events/form")
-    public String eventsForm(Model model, HttpSession httpSession){
-        Event newEvent = new Event();
-        newEvent.setId(1);
-        model.addAttribute("event", newEvent);
-        httpSession.setAttribute("event", newEvent);
-        return "events/form";
+    @GetMapping("/events/form/name")
+    public String eventsFormName(Model model){
+        model.addAttribute("event", new Event());
+        return "/events/form-name";
     }
 
-    @PostMapping("events")
-    public String getEvent(@Validated @ModelAttribute Event event, BindingResult bindingResult, SessionStatus sessionStatus){
+    @PostMapping("/events/form/name")
+    public String eventsFormNameSubmit(@Validated @ModelAttribute Event event, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
-            return "/events/form";
+            return "/events/form-name";
+        }
+
+        return "redirect:/events/form/limit";
+    }
+
+    @GetMapping("/events/form/limit")
+    public String eventsFormLimit(@ModelAttribute Event event, Model model){
+        model.addAttribute("event", event);
+        return "/events/form-limit";
+    }
+
+    @PostMapping("/events/form/limit")
+    public String eventsFormLimitSubmit(@Validated @ModelAttribute Event event, BindingResult bindingResult, SessionStatus sessionStatus){
+        if(bindingResult.hasErrors()){
+            return "/events/form-limit";
         }
         sessionStatus.setComplete();
-        
         return "redirect:/events/list";
     }
 
@@ -38,7 +50,6 @@ public class SimpleController {
     public String getEvents(Model model){
         Event event = new Event();
         event.setName("beobsik");
-
 
         List<Event> eventList = new ArrayList<>();
         eventList.add(event);

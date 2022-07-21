@@ -1,5 +1,6 @@
 package com.example.demospringwebmvcapplication;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotBlank;
 
 public class Event {
@@ -9,6 +10,9 @@ public class Event {
     private Integer id;
 
     private String name;
+
+    @Min(0)
+    private Integer limit;
 
     public Integer getId() {
         return id;
@@ -24,5 +28,13 @@ public class Event {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Integer getLimit() {
+        return limit;
+    }
+
+    public void setLimit(Integer limit) {
+        this.limit = limit;
     }
 }
