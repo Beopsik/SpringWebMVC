@@ -9,6 +9,7 @@ import org.springframework.web.bind.support.SessionStatus;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -34,7 +35,7 @@ public class SimpleController {
     @GetMapping("/events/form/limit")
     public String eventsFormLimit(@ModelAttribute Event event, Model model){
         model.addAttribute("event", event);
-        return "/events/form-limit";
+         return "/events/form-limit";
     }
 
     @PostMapping("/events/form/limit")
@@ -47,7 +48,8 @@ public class SimpleController {
     }
 
     @GetMapping("/events/list")
-    public String getEvents(Model model){
+    public String getEvents(Model model, @SessionAttribute LocalDateTime visitTime){
+        System.out.println(visitTime);
         Event event = new Event();
         event.setName("beobsik");
 
