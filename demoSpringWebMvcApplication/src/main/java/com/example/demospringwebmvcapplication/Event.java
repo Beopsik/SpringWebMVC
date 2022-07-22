@@ -9,6 +9,7 @@ public class Event {
 
     private Integer id;
 
+    @NotBlank
     private String name;
 
     @Min(0)
